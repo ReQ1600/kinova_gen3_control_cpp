@@ -8,9 +8,9 @@ Project uses kinova Gen 3 robotic arm
 
 ### Dependencies
 
-ros2_kortex
-moveit2
-moveit_resources
+- ros2_kortex
+- moveit2
+- moveit_resources
 
 ### Installing
 
@@ -43,6 +43,3 @@ Run the simulation with:
   use_fake_hardware:=true
 ~~~
 Then run the node with ros2 run (will later be changed to common launch file)
-
-### Docker
-To be added
