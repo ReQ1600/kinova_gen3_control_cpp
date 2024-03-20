@@ -42,7 +42,7 @@ Run the simulation with:
   robot_ip:=yyy.yyy.yyy.yyy \
   use_fake_hardware:=true
 ~~~
-Then run the node with ros2 run (till later be changed to common launch file)
+Then run the node with ros2 run (will later be changed to common launch file)
 
 ### Docker
 To be added
