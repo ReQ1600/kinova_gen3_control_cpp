@@ -16,8 +16,10 @@ Project uses kinova Gen 3 robotic arm
 ### Installing
 
 Install ros2_kortex from Kinovarobotics on github (https://github.com/Kinovarobotics/ros2_kortex) do what readme tells you to do.
+
 Clone moveit_resources from https://github.com/ros-planning/moveit_resources.git
-Download moveit2:
+
+Source your workspace and download moveit2:
 ~~~
   git clone https://github.com/ros-planning/moveit2.git -b $ROS_DISTRO
   for repo in moveit2/moveit2.repos $(f="moveit2/moveit2_$ROS_DISTRO.repos"; test -r $f && echo $f); do vcs import < "$repo"; done
@@ -29,7 +31,7 @@ Download moveit2:
 To build from source, clone the latest version from this repository into your colcon workspace and build the package using:
 ~~~
   cd <your_workspace_name>/src
-  git clone https://github.com/ReQ1600/lunarteam-soft.git
+  git clone https://github.com/ReQ1600/lunarteam-kinova-gen3-control.git
   cd ..
   rosdep install --from-paths . --ignore-src
   colcon build
@@ -43,4 +45,4 @@ Run the simulation with:
   robot_ip:=yyy.yyy.yyy.yyy \
   use_fake_hardware:=true
 ~~~
-Then run the node with ros2 run (will later be changed to common launch file)
+Then run the node with ros2 run (will later be changed to a common launch file)
