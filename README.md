@@ -1,9 +1,10 @@
 # lunarteam-kinova-gen3-control
 ### Overview
 
-This is a repository created as a temporary repository for PUTLunarTeam software team. Everything is bound to change.
+Repository for ROS2 package controlling kinova gen3 robotic arm
 
-All packages are created and tested on ROS2 Humble
+Package created and tested on ROS2 Humble
+
 Project uses kinova Gen 3 robotic arm
 
 ### Dependencies
