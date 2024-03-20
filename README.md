@@ -11,13 +11,12 @@ Project uses kinova Gen 3 robotic arm
 ros2_kortex
 moveit2
 moveit_resources
-ros2_robotiq_gripper
 
 ### Installing
+
 Install ros2_kortex from Kinovarobotics on github (https://github.com/Kinovarobotics/ros2_kortex) do what readme tells you to do.
 Clone moveit_resources from https://github.com/ros-planning/moveit_resources.git
-Clone ros2_robotiq_gripper from https://github.com/PickNikRobotics/ros2_robotiq_gripper.git
-Download moveit2
+Download moveit2:
 ~~~
   git clone https://github.com/ros-planning/moveit2.git -b $ROS_DISTRO
   for repo in moveit2/moveit2.repos $(f="moveit2/moveit2_$ROS_DISTRO.repos"; test -r $f && echo $f); do vcs import < "$repo"; done
@@ -34,6 +33,16 @@ To build from source, clone the latest version from this repository into your co
   rosdep install --from-paths . --ignore-src
   colcon build
 ~~~
+
+### Running
+
+Run the simulation with:
+~~~
+  ros2 launch kortex_bringup gen3.launch.py \
+  robot_ip:=yyy.yyy.yyy.yyy \
+  use_fake_hardware:=true
+~~~
+Then run the node with ros2 run (till later be changed to common launch file)
 
 ### Docker
 To be added
