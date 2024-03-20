@@ -1,4 +1,4 @@
-# lunarteam-soft
+# lunarteam-kinova-gen3-control
 ### Overview
 
 This is a repository created as a temporary repository for PUTLunarTeam software team. Everything is bound to change.
