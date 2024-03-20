@@ -11,10 +11,12 @@ Project uses kinova Gen 3 robotic arm
 ros2_kortex
 moveit2
 moveit_resources
+ros2_robotiq_gripper
 
 ### Installing
 Install ros2_kortex from Kinovarobotics on github (https://github.com/Kinovarobotics/ros2_kortex) do what readme tells you to do.
 Clone moveit_resources from https://github.com/ros-planning/moveit_resources.git
+Clone ros2_robotiq_gripper from https://github.com/PickNikRobotics/ros2_robotiq_gripper.git
 Download moveit2
 ~~~
   git clone https://github.com/ros-planning/moveit2.git -b $ROS_DISTRO
