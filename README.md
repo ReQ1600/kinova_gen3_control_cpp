@@ -1,7 +1,7 @@
-# lunarteam-kinova-gen3-control
+# kinova_gen3_control_cpp
 ### Overview
 
-Repository for ROS2 package controlling kinova gen3 robotic arm
+PUTLunarTeam repository for ROS2 package controlling kinova gen3 robotic arm
 
 Package created and tested on ROS2 Humble
 
@@ -31,7 +31,7 @@ Source your workspace and download moveit2:
 To build from source, clone the latest version from this repository into your colcon workspace and build the package using:
 ~~~
   cd <your_workspace_name>/src
-  git clone https://github.com/ReQ1600/lunarteam-kinova-gen3-control.git
+  git clone https://github.com/ReQ1600/kinova_gen3_control_cpp.git
   cd ..
   rosdep install --from-paths . --ignore-src
   colcon build
