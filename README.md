@@ -1,7 +1,7 @@
 # kinova_gen3_control_cpp
 ### Overview
 
-PUTLunarTeam repository for ROS2 package controlling kinova gen3 robotic arm
+PUTLunarTeam repository for ROS2 package controlling kinova gen3 robotic arm with 7 degrees of freedom
 
 Package created and tested on ROS2 Humble
 
@@ -15,7 +15,13 @@ Project uses kinova Gen 3 robotic arm
 
 ### Installing
 
-Install ros2_kortex from Kinovarobotics on github (https://github.com/Kinovarobotics/ros2_kortex) do what readme tells you to do.
+Source your workspace and install ros2_kortex from Kinovarobotics.
+~~~
+  sudo apt install ros-$ROS_DISTRO-kortex-bringup
+  sudo apt install ros-$ROS_DISTRO-kinova-gen3-7dof-robotiq-2f-85-moveit-config
+  sudo apt install ros-$ROS_DISTRO-rmw-cyclonedds-cpp
+  RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+~~~
 
 Clone moveit_resources from https://github.com/ros-planning/moveit_resources.git
 
@@ -41,7 +47,7 @@ To build from source, clone the latest version from this repository into your co
 
 Run the simulation with:
 ~~~
-  ros2 launch kortex_bringup gen3.launch.py \
+  ros2 launch kinova_gen3_7dof_robotiq_2f_85_moveit_config robot.launch.py \
   robot_ip:=yyy.yyy.yyy.yyy \
   use_fake_hardware:=true
 ~~~
