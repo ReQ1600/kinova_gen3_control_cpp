@@ -37,6 +37,7 @@ Source your workspace and download moveit2:
 To build from source, clone the latest version from this repository into your colcon workspace and build the package using:
 ~~~
   cd <your_workspace_name>/src
+  git clone https://github.com/ReQ1600/kinova_gen3_control_interfaces.git
   git clone https://github.com/ReQ1600/kinova_gen3_control_cpp.git
   cd ..
   rosdep install --from-paths . --ignore-src
