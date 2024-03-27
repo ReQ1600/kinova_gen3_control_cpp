@@ -9,9 +9,10 @@ Project uses kinova Gen 3 robotic arm
 
 ### Dependencies
 
-- ros2_kortex
-- moveit2
-- moveit_resources
+- [kinova_gen3_control_interfaces](https://github.com/ReQ1600/kinova_gen3_control_interfaces)
+- [ros2_kortex](https://github.com/Kinovarobotics/ros2_kortex)
+- [moveit2](https://github.com/ros-planning/moveit2)
+- [moveit_resources](https://github.com/ros-planning/moveit_resources)
 
 ### Installing
 
@@ -34,7 +35,7 @@ Source your workspace and download moveit2:
 
 ### Building
 
-To build from source, clone the latest version from this repository into your colcon workspace and build the package using:
+To build from source, clone the latest version from this and interfaces repository into your colcon workspace and build the package using:
 ~~~
   cd <your_workspace_name>/src
   git clone https://github.com/ReQ1600/kinova_gen3_control_interfaces.git
@@ -46,10 +47,26 @@ To build from source, clone the latest version from this repository into your co
 
 ### Running
 
-Run the simulation with:
+Launch the simulation and the server with:
 ~~~
-  ros2 launch kinova_gen3_7dof_robotiq_2f_85_moveit_config robot.launch.py \
-  robot_ip:=yyy.yyy.yyy.yyy \
-  use_fake_hardware:=true
+  ros2 launch kinova_gen3_control_cpp demo.launch.py
 ~~~
-Then run the node with ros2 run (will later be changed to a common launch file)
+Then you can move the robot with
+~~~
+  ros2 action send_goal /move_arm_effector kinova_gen3_control_interfaces/action/MoveArmEffector "{goal_point: {x: <float>, y: <float>, z: <float>}}"
+~~~
+
+### Resault
+~~~
+  bool success
+~~~
+
+### Feedback
+~~~
+  string error
+  geometry_msgs/Point current_effector_position
+	float64 x
+	float64 y
+	float64 z
+~~~
+
