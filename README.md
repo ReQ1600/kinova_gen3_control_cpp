@@ -51,6 +51,18 @@ Launch the simulation and the server with:
 ~~~
   ros2 launch kinova_gen3_control_cpp demo.launch.py
 ~~~
+
+Alternatively you can launch kortex's rviz
+~~~
+  ros2 launch kinova_gen3_7dof_robotiq_2f_85_moveit_config robot.launch.py \
+    robot_ip:=yyy.yyy.yyy.yyy \
+    use_fake_hardware:=true
+~~~
+Then ros run the node
+~~~
+  ros2 run kinova_gen3_control_cpp arm_move_to_point_server
+~~~
+
 Then you can move the robot with
 ~~~
   ros2 action send_goal /move_arm_effector kinova_gen3_control_interfaces/action/MoveArmEffector "{goal_point: {x: <float>, y: <float>, z: <float>}}"
