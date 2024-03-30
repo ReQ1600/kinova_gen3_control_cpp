@@ -26,7 +26,28 @@ Source your workspace and install ros2_kortex from Kinovarobotics.
 
 Clone moveit_resources from https://github.com/ros-planning/moveit_resources.git
 
-Source your workspace and download moveit2:
+Source your workspace and make sure vcstool, rosdep and colcon are installed 
+#### rosdep
+~~~
+  sudo apt install python3-rosdep
+  sudo rosdep init
+  rosdep update
+  sudo apt update
+  sudo apt dist-upgrade
+~~~
+#### Colcon with mixin
+~~~
+  sudo apt install python3-colcon-common-extensions
+  sudo apt install python3-colcon-mixin
+  colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+  colcon mixin update default
+~~~
+#### vcstool
+~~~
+  sudo apt install python3-vcstool
+~~~
+
+Then download moveit2:
 ~~~
   git clone https://github.com/ros-planning/moveit2.git -b $ROS_DISTRO
   for repo in moveit2/moveit2.repos $(f="moveit2/moveit2_$ROS_DISTRO.repos"; test -r $f && echo $f); do vcs import < "$repo"; done
