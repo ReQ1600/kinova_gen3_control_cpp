@@ -63,8 +63,9 @@ To build from source, clone the latest version from this and interfaces reposito
   git clone https://github.com/ReQ1600/kinova_gen3_control_cpp.git
   cd ..
   rosdep install --from-paths . --ignore-src
-  colcon build
+  colcon build --mixin release
 ~~~
+I advise using "--executor sequential" flag for colcon build, but it's not necessary.
 
 ### Running
 
