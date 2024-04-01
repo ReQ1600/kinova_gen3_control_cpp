@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(rclcpp_components REQUIRED)
+find_package(moveit_ros_planning_interface REQUIRED)
 find_package(kinova_gen3_control_interfaces REQUIRED)
 
 #for the server
@@ -22,6 +23,7 @@ target_compile_definitions(action_server
   PRIVATE "KINOVA_GEN3_CONTROL_CPP_BUILDING_DLL")
 ament_target_dependencies(action_server
   "kinova_gen3_control_interfaces"
+  "moveit_ros_planning_interface"
   "rclcpp"
   "rclcpp_action"
   "rclcpp_components")
