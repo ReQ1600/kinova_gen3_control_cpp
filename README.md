@@ -69,12 +69,7 @@ I advise using "--executor sequential" flag for colcon build, but it's not neces
 
 ### Running
 
-Launch the simulation and the server with:
-~~~
-  ros2 launch kinova_gen3_control_cpp demo.launch.py
-~~~
-
-Alternatively you can launch kortex's rviz
+Launch the simulation with kortex's rviz
 ~~~
   ros2 launch kinova_gen3_7dof_robotiq_2f_85_moveit_config robot.launch.py \
     robot_ip:=yyy.yyy.yyy.yyy \

@@ -13,6 +13,7 @@ find_package(rclcpp_components REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(kinova_gen3_control_interfaces REQUIRED)
 
+
 #for the server
 add_library(action_server SHARED
   src/arm_move_to_point_server.cpp)
