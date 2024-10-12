@@ -85,7 +85,7 @@ Then you can move the robot with
   ros2 action send_goal /move_arm_effector kinova_gen3_control_interfaces/action/MoveArmEffector "{goal_point: {x: <float>, y: <float>, z: <float>}}"
 ~~~
 
-### Resault
+### Result
 ~~~
   bool success
 ~~~
