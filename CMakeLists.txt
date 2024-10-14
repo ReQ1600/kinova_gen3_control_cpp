@@ -12,6 +12,8 @@ find_package(rclcpp_action REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(kinova_gen3_control_interfaces REQUIRED)
+find_package(kinova_gen3_7dof_robotiq_2f_85_moveit_config REQUIRED)
+find_package(kortex_bringup REQUIRED)
 
 
 #for the server
